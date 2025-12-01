@@ -1,0 +1,72 @@
+/* Contenedor principal */
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Tarjeta del usuario */
+.user-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  min-height: 250px;
+}
+
+/* Animación tipo pasar página */
+.slide-left {
+  transform: translateX(-60px) rotateY(-15deg);
+  opacity: 0;
+}
+
+.slide-right {
+  transform: translateX(60px) rotateY(15deg);
+  opacity: 0;
+}
+
+.user-card:not(.slide-left):not(.slide-right) {
+  transform: translateX(0) rotateY(0);
+  opacity: 1;
+}
+
+/* Imagen */
+.avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+/* Botones alineados */
+.btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Estilo de los botones */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  transition: background 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+/* Botones deshabilitados */
+.btn.disabled,
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
