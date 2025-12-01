@@ -70,3 +70,49 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+.user-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  transition: transform 0.3s;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.btn {
+  padding: 8px 16px;
+  margin: 10px 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+}
+
+.small-btn {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+
+.details-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.details-container.expanded {
+  max-height: 200px; /* ajusta según contenido */
+}
+
+.details p {
+  margin: 5px 0;
+}
